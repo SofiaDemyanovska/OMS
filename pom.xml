@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.17</version>
+			<version>8.0.13</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -233,7 +233,7 @@
 		<repository>
 			<id>org.springframework.maven.snapshot</id>
 			<name>Spring Maven Snapshot Repository</name>
-			<url>http://maven.springframework.org/snapshot</url>
+			<url>https://maven.springframework.org/snapshot</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -245,7 +245,7 @@
 		<repository>
 			<id>org.springframework.maven.milestone</id>
 			<name>Spring Maven Milestone Repository</name>
-			<url>http://maven.springframework.org/milestone</url>
+			<url>https://maven.springframework.org/milestone</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
@@ -259,6 +259,7 @@
 				<configuration>
 					<source>${java-version}</source>
 					<target>${java-version}</target>
+                                        <encoding>Cp1252</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -356,7 +357,6 @@
     <artifactId>maven-surefire-plugin</artifactId>
     <configuration>
     	<skipTests>true</skipTests>
-        <classesDirectory>${project.build.directory}/generated-classes/emma/classes</classesDirectory>
     </configuration>
 </plugin>
 
